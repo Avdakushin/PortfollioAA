@@ -36,9 +36,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	animation: MenuButtonSlideFromLeft 0.8s ease-out forwards;
+	animation: MenuButtonfadeIn 1s ease-out forwards;
 	opacity: 0;
-	animation-delay: 1s;
+	animation-delay: 5s;
 }
 
 .MenuButton span {
@@ -49,16 +49,11 @@ body {
 	transition: all 0.3s ease;
 }
 
-@keyframes MenuButtonSlideFromLeft {
-	from {
-		opacity: 0;
-		transform: translateX(-50px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
+@keyframes MenuButtonfadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
+
 
 /* Открытое Боковое Меню */
 .side-menu {
