@@ -205,7 +205,7 @@ section {
 
 .project-card:hover {
 	transform: translateY(-5px);
-	box-shadow: 0 1px 20px rgba(199, 199, 199, 0.527);
+	/* box-shadow: 0 1px 20px rgba(199, 199, 199, 0.527); */
 	transition: 0.3s;
 }
 
