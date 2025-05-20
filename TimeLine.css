@@ -108,7 +108,7 @@ body {
 }
 
 .timeline {
-	max-width: 460px;
+	max-width: 450px;
 	margin: 0 auto 100px;
 	color: #ffffff;
 	text-align: left;
@@ -186,7 +186,7 @@ body {
 
 .timeline-detail {
 	position: fixed;
-	top: 65%;
+	top: 72%;
 	/* left: 150%; */
   left: 50%;
 	transform: translate(-50%, -50%);
