@@ -187,7 +187,8 @@ body {
 .timeline-detail {
 	position: fixed;
 	top: 65%;
-	left: 150%;
+	/* left: 150%; */
+  left: 50%;
 	transform: translate(-50%, -50%);
 	width: 320px;
 	max-width: 90vw;
