@@ -36,6 +36,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	animation: MenuButtonSlideFromLeft 0.8s ease-out forwards;
+	opacity: 0;
+	animation-delay: 1s;
 }
 
 .MenuButton span {
@@ -44,6 +47,17 @@ body {
 	background-color: #7d6656;
 	border-radius: 2px;
 	transition: all 0.3s ease;
+}
+
+@keyframes MenuButtonSlideFromLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 /* Открытое Боковое Меню */
