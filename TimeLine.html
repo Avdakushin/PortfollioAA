@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>TimeLine</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="TimeLine.css" />
+	</head>
+	<body>
+		<!-- Кнопка Меню -->
+		<div class="MenuButton" onclick="toggleMenu()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<!-- Боковое Меню -->
+		<nav class="side-menu" id="sideMenu">
+			<ul>
+				<li><a href="Main.html">Main</a></li>
+				<li><a href="#">Certificates</a></li>
+			</ul>
+		</nav>
+		<!-- Зетемнение Фона -->
+		<div id="Blackout" onclick="toggleMenu()"></div>
+
+		<section class="timeline">
+			<h2>Experience Timeline</h2>
+			<ul>
+				<li
+					data-title="XXXX"
+					data-description="Описание отсутствует"
+				>
+					XXXX: Soon
+				</li>
+				<li
+					data-title="XXXX"
+					data-description="Описание отсутствует"
+				>
+					XXXX: Soon
+				</li>
+				<li
+					data-title="XXXX"
+					data-description="Описание отсутствует"
+				>
+					XXXX: Soon
+				</li>
+			</ul>
+
+			<!-- Блок описания -->
+			<div class="timeline-detail" id="timelineDetail">
+				<button class="close-detail" onclick="closeDetail()">✕</button>
+				<h3 id="detailTitle">Год</h3>
+				<p id="detailDescription">Описание события</p>
+			</div>
+		</section>
+
+		<script>
+      // Боковое Меню
+			function toggleMenu() {
+				const menu = document.getElementById('sideMenu')
+				const overlay = document.getElementById('Blackout')
+				menu.classList.toggle('open')
+				overlay.classList.toggle('active')
+			}
+
+			document.addEventListener('click', function (e) {
+				const menu = document.getElementById('sideMenu')
+				const burger = document.querySelector('.MenuButton')
+				const overlay = document.getElementById('Blackout')
+
+				if (
+					!menu.contains(e.target) &&
+					!burger.contains(e.target) &&
+					menu.classList.contains('open')
+				) {
+					toggleMenu()
+				}
+			})
+
+			// Клик
+			document.querySelectorAll('.timeline li').forEach(item => {
+				item.addEventListener('click', () => {
+					const title = item.getAttribute('data-title')
+					const description = item.getAttribute('data-description')
+					document.getElementById('detailTitle').textContent = title
+					document.getElementById('detailDescription').textContent = description
+					document.getElementById('timelineDetail').classList.add('show')
+				})
+			})
+
+			// Закрытие Описания
+			function closeDetail() {
+				document.getElementById('timelineDetail').classList.remove('show')
+			}
+		</script>
+	</body>
+</html>

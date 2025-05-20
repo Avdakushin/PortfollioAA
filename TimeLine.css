@@ -1,0 +1,217 @@
+@font-face {
+	font-family: 'YellovaSignature';
+	src: url('fonts/YellovaSignature.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Piazzolla';
+	src: url('fonts/Piazzolla.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Angst-Thin';
+	src: url('fonts/Angst-Thin.otf') format('opentype');
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;    
+}
+
+/* Кнопка Меню */
+.MenuButton {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 30px;
+	height: 22px;
+	cursor: pointer;
+	z-index: 1001;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.MenuButton span {
+	display: block;
+	height: 4px;
+	background-color: #7d6656;
+	border-radius: 2px;
+	transition: all 0.3s ease;
+}
+
+/* Открытое Боковое Меню */
+.side-menu {
+	position: fixed;
+	top: 0;
+	right: -250px;
+	width: 250px;
+	height: 100%;
+	background-color: #0f0f0f;
+	color: white;
+	transition: right 0.3s ease;
+	z-index: 1000;
+	padding-top: 40px;
+}
+
+.side-menu.open {
+	right: 0;
+}
+
+.side-menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.side-menu li {
+	padding: 10px 20px;
+}
+
+.side-menu a {
+	color: #7d6656;
+	text-decoration: none;
+	display: block;
+	font-weight: 400;
+	font-family: 'Angst-Thin';
+	font-size: 25px;
+}
+
+.side-menu a:hover {
+	color: #fff;
+}
+
+/* Затемнение Фона */
+#Blackout {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 999;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease;
+}
+
+#Blackout.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.timeline {
+  max-width: 700px;
+  margin: 0 auto 100px;
+  color: #ffffff; 
+  text-align: left;
+  font-family: 'Angst-Thin';
+  opacity: 0;
+  transform: translateY(30px);
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.timeline h2 {
+  font-family: 'YellovaSignature';
+  font-size: 36px;
+  letter-spacing: 4px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #7d6656;
+  animation: fadeIn 1.2s ease-out forwards;
+	opacity: 0;
+	animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.timeline ul {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  background: #1c1c1c;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.timeline li:nth-child(1) { animation-delay: 1.6s; }
+.timeline li:nth-child(2) { animation-delay: 1.9s; }
+.timeline li:nth-child(3) { animation-delay: 2.2s; }
+
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.timeline li:hover {
+  background-color: #343434;
+  color: #7d6656;
+  cursor: default;
+} 
+
+.timeline-detail {
+  position: fixed;
+  top: 65%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  max-width: 90vw;
+  background: #1c1c1c;
+  color: #ccc;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.timeline-detail.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.close-detail {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #999;
+  cursor: pointer;
+}
+.close-detail:hover {
+  color: #fff;
+}
