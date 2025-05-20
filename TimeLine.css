@@ -108,7 +108,7 @@ body {
 }
 
 .timeline {
-	max-width: 700px;
+	max-width: 460px;
 	margin: 0 auto 100px;
 	color: #ffffff;
 	text-align: left;
@@ -122,7 +122,7 @@ body {
 
 .timeline h2 {
 	font-family: 'YellovaSignature';
-	font-size: 36px;
+	font-size: 50px;
 	letter-spacing: 4px;
 	font-weight: 400;
 	margin-bottom: 40px;
