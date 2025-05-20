@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<title>Avdakushin</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
@@ -12,16 +13,31 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-	<title>Avdakushin</title>
 	</head>
 	<body>
-		<div id="particles-js"></div>
+		<!-- Кнопка Меню -->
+		<div class="MenuButton" onclick="toggleMenu()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<!-- Боковое Меню -->
+		<nav class="side-menu" id="sideMenu">
+			<ul>
+				<li><a href="#">Certificates</a></li>
+				<li><a href="#">Timeline</a></li>
+			</ul>
+		</nav>
+		<!-- Зетемнение Фона -->
+		<div id="Blackout" onclick="toggleMenu()"></div>
 
+		<!-- Шапка -->
 		<header class="header">
-			<h1 class="AA">Andrey Avdakushin</h1>
-			<h2 class="ABOUT">Portfolio</h2>
+			<h1 class="BrandAA">Andrey Avdakushin</h1>
+			<h2 class="AboutAA">Portfolio</h2>
 		</header>
 
+		<!-- Главное -->
 		<main>
 			<section class="about">
 				<h2>About Me</h2>
@@ -35,6 +51,7 @@
 				</p>
 			</section>
 
+			<!-- Карточки Проектов -->
 			<section class="projects">
 				<h2>Projects</h2>
 				<div class="project-grid">
@@ -57,25 +74,28 @@
 			</section>
 		</main>
 
-		<section class="skills">
-			<h2>Skills</h2>
-			<div class="skills-grid">
-				<div class="skill-card">
+		<!-- Скрипты -->
+		<section class="scripts">
+			<h2>Scripts</h2>
+			<div class="scripts-grid">
+				<div class="script-card">
 					<i class="fab fa-python"></i><span>Python</span>
 				</div>
-				<div class="skill-card">
+				<div class="script-card">
 					<i class="fab fa-js-square"></i><span>JavaScript</span>
 				</div>
-				<div class="skill-card">
+				<div class="script-card">
 					<i class="fab fa-html5"></i><span>HTML5</span>
 				</div>
-				<div class="skill-card">
+				<div class="script-card">
 					<i class="fab fa-css3-alt"></i><span>CSS3</span>
 				</div>
-				<div class="skill-card">
+				<div class="script-card">
 					<i class="fas fa-code"></i><span>C++</span>
 				</div>
-				<div class="skill-card"><i class="fas fa-code"></i><span>C#</span></div>
+				<div class="script-card">
+					<i class="fas fa-code"></i><span>C#</span>
+				</div>
 			</div>
 		</section>
 
@@ -83,9 +103,32 @@
 			<p>© 2025 Andrey Avdakushin</p>
 			<div class="socials">
 				<a href="https://github.com/Avdakushin#">GitHub</a>
-				<a href="https://t.me/avdakushinщ#">Telegram</a>
+				<a href="https://t.me/avdakushin#">Telegram</a>
 				<a href="#">Email</a>
 			</div>
 		</footer>
+
+		<script>
+			function toggleMenu() {
+				const menu = document.getElementById('sideMenu')
+				const overlay = document.getElementById('Blackout')
+				menu.classList.toggle('open')
+				overlay.classList.toggle('active')
+			}
+
+			document.addEventListener('click', function (e) {
+				const menu = document.getElementById('sideMenu')
+				const burger = document.querySelector('.MenuButton')
+				const overlay = document.getElementById('Blackout')
+
+				if (
+					!menu.contains(e.target) &&
+					!burger.contains(e.target) &&
+					menu.classList.contains('open')
+				) {
+					toggleMenu()
+				}
+			})
+		</script>
 	</body>
 </html>

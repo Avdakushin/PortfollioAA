@@ -13,6 +13,7 @@
 	src: url('fonts/Angst-Thin.otf') format('opentype');
 }
 
+/* Тело */
 body {
 	background-color: #000;
 	margin: 0;
@@ -23,12 +24,96 @@ body {
 	overflow-x: hidden;
 }
 
+/* Кнопка Меню */
+.MenuButton {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 30px;
+	height: 22px;
+	cursor: pointer;
+	z-index: 1001;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.MenuButton span {
+	display: block;
+	height: 4px;
+	background-color: #7d6656;
+	border-radius: 2px;
+	transition: all 0.3s ease;
+}
+
+/* Открытое Боковое Меню */
+.side-menu {
+	position: fixed;
+	top: 0;
+	right: -250px; 
+	width: 250px;
+	height: 100%;
+	background-color: #0f0f0f;
+	color: white;
+	transition: right 0.3s ease;
+	z-index: 1000;
+	padding-top: 40px;
+}
+
+.side-menu.open {
+	right: 0; 
+}
+
+.side-menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.side-menu li {
+	padding: 10px 20px;
+}
+
+.side-menu a {
+	color: #7d6656;
+	text-decoration: none;
+	display: block;
+	font-weight: 400;
+	font-family: 'Angst-Thin';
+	font-size: 25px;
+}
+
+.side-menu a:hover {
+	color: #fff;
+}
+
+/* Затемнение Фона */
+#Blackout {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 999;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease;
+}
+
+#Blackout.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Шапка */
 header {
 	text-align: center;
 	padding-top: 5vh;
 }
 
-h1.AA {
+/* Заставка */
+h1.BrandAA {
 	color: #7d6656;
 	font-family: 'YellovaSignature', serif;
 	font-size: 52px;
@@ -41,7 +126,7 @@ h1.AA {
 	animation-delay: 0.5s;
 }
 
-h2.ABOUT {
+h2.AboutAA {
 	color: #fff;
 	font-family: 'Angst-Thin';
 	font-size: 25px;
@@ -73,7 +158,7 @@ section {
 
 .about h2,
 .projects h2,
-.skills h2 {
+.scripts h2 {
 	font-family: 'YellovaSignature';
 	font-size: 50px;
 	color: #7d6656;
@@ -96,6 +181,7 @@ section {
 .about p:nth-of-type(2) { animation-delay: 3.4s; }
 .about p:nth-of-type(3) { animation-delay: 3.6s; }
 
+/* Проекты */
 .projects {
 	animation-delay: 4.2s;
 }
@@ -117,6 +203,12 @@ section {
 	animation: slideUpFade 1s ease-out forwards;
 }
 
+.project-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 1px 20px rgba(199, 199, 199, 0.527);
+	transition: 0.3s;
+}
+
 .project-card:nth-child(1) { animation-delay: 5s; }
 .project-card:nth-child(2) { animation-delay: 5.2s; }
 .project-card:nth-child(3) { animation-delay: 5.4s; }
@@ -135,6 +227,75 @@ section {
 	font-family: 'Angst-Thin';
 }
 
+.project-card img {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 12px;
+	margin-bottom: 15px;
+	display: block;
+}
+
+@keyframes fadeScaleIn {
+	0% { opacity: 0; transform: scale(0.8); }
+	100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes fadeInText {
+	0% { opacity: 0; transform: translateY(10px); }
+	100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUpFade {
+	0% { opacity: 0; transform: translateY(40px); }
+	100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Скрипты */
+.scripts {
+	text-align: center;
+	margin-bottom: 100px;
+	animation: slideUpFade 1s ease-out forwards;
+	animation-delay: 4.8s;
+	opacity: 0;
+}
+
+.scripts-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 30px;
+}
+
+.script-card {
+	background: #1c1c1c;
+	padding: 20px 25px;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
+	font-family: 'Angst-Thin';
+	font-size: 16px;
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.script-card i {
+	font-size: 36px;
+	margin-bottom: 10px;
+	color: #7d6656;
+}
+
+.script-card:hover {
+	transform: translateY(-5px);
+}
+
+/* Футер */
 .footer {
 	padding: 30px 20px;
 	background: #000;
@@ -162,76 +323,3 @@ section {
 	color: #fff;
 }
 
-@keyframes fadeScaleIn {
-	0% { opacity: 0; transform: scale(0.8); }
-	100% { opacity: 1; transform: scale(1); }
-}
-
-@keyframes fadeIn {
-	from { opacity: 0; }
-	to { opacity: 1; }
-}
-
-@keyframes fadeInText {
-	0% { opacity: 0; transform: translateY(10px); }
-	100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideUpFade {
-	0% { opacity: 0; transform: translateY(40px); }
-	100% { opacity: 1; transform: translateY(0); }
-}
-
-.project-card:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 1px 20px rgb(125, 102, 86);
-	transition: 0.3s;
-}
-
-.skills {
-	text-align: center;
-	margin-bottom: 100px;
-	animation: slideUpFade 1s ease-out forwards;
-	animation-delay: 4.8s;
-	opacity: 0;
-}
-
-.skills-grid {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 30px;
-}
-
-.skill-card {
-	background: #1c1c1c;
-	padding: 20px 25px;
-	border-radius: 12px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	color: #fff;
-	font-family: 'Angst-Thin';
-	font-size: 16px;
-	transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.skill-card i {
-	font-size: 36px;
-	margin-bottom: 10px;
-	color: #7d6656;
-}
-
-.skill-card:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
-}
-
-.project-card img {
-	width: 100%;
-	height: 150px;
-	object-fit: cover;
-	border-radius: 12px;
-	margin-bottom: 15px;
-	display: block;
-}
