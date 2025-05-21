@@ -24,8 +24,9 @@
 		<!-- Боковое Меню -->
 		<nav class="side-menu" id="sideMenu">
 			<ul>
-				<li><a href="#">Certificates</a></li>
-				<li><a href="#">Timeline</a></li>
+				<li><a href="#">All Projects</a></li>
+				<li><a href="Certificates.html">Certificates</a></li>
+				<li><a href="TimeLine.html">Timeline</a></li>
 			</ul>
 		</nav>
 		<!-- Зетемнение Фона -->
@@ -125,6 +126,15 @@
 					!menu.contains(e.target) &&
 					!burger.contains(e.target) &&
 					menu.classList.contains('open')
+				) {
+					toggleMenu()
+				}
+			})
+			// Скрытие меню Esc
+			document.addEventListener('keydown', function (e) {
+				if (
+					e.key === 'Escape' &&
+					document.getElementById('sideMenu').classList.contains('open')
 				) {
 					toggleMenu()
 				}

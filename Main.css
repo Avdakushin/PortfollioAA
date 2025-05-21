@@ -4,13 +4,12 @@
 }
 
 @font-face {
-	font-family: 'Piazzolla';
-	src: url('fonts/Piazzolla.ttf') format('truetype');
-}
-
-@font-face {
 	font-family: 'Angst-Thin';
 	src: url('fonts/Angst-Thin.otf') format('opentype');
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Тело */
@@ -36,9 +35,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	animation: MenuButtonfadeIn 1s ease-out forwards;
-	opacity: 0;
-	animation-delay: 5s;
 }
 
 .MenuButton span {
