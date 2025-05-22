@@ -113,10 +113,26 @@
 			function toggleMenu() {
 				const menu = document.getElementById('sideMenu')
 				const overlay = document.getElementById('Blackout')
+				const body = document.body
+
+				const isOpen = menu.classList.contains('open')
 				menu.classList.toggle('open')
 				overlay.classList.toggle('active')
+
+				if (!isOpen) {
+					// Блокируем прокрутку и компенсируем исчезновение скроллбара
+					const scrollbarWidth =
+						window.innerWidth - document.documentElement.clientWidth
+					body.style.overflow = 'hidden'
+					body.style.paddingRight = scrollbarWidth + 'px'
+				} else {
+					// Восстанавливаем прокрутку и отступ
+					body.style.overflow = ''
+					body.style.paddingRight = ''
+				}
 			}
 
+			// Закрытие при клике вне меню
 			document.addEventListener('click', function (e) {
 				const menu = document.getElementById('sideMenu')
 				const burger = document.querySelector('.MenuButton')
@@ -130,7 +146,8 @@
 					toggleMenu()
 				}
 			})
-			// Скрытие меню Esc
+
+			// Закрытие при нажатии Escape
 			document.addEventListener('keydown', function (e) {
 				if (
 					e.key === 'Escape' &&
