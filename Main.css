@@ -39,7 +39,7 @@ body {
 .MenuButton span {
 	display: block;
 	height: 4px;
-	background-color: #7d6656;
+	background-color: #c99e7d;
 	border-radius: 2px;
 }
 
@@ -81,7 +81,7 @@ body {
 }
 
 .side-menu a {
-	color: #7d6656;
+	color: #c99e7d;
 	text-decoration: none;
 	display: block;
 	font-weight: 400;
@@ -120,7 +120,7 @@ header {
 
 /* Заставка */
 h1.BrandAA {
-	color: #7d6656;
+	color: #c99e7d;
 	font-family: 'YellovaSignature', serif;
 	font-size: 52px;
 	font-weight: 400;
@@ -167,7 +167,7 @@ section {
 .scripts h2 {
 	font-family: 'YellovaSignature';
 	font-size: 50px;
-	color: #7d6656;
+	color: #c99e7d;
 	letter-spacing: 4px;
 	margin-bottom: 40px;
 	font-weight: 400;
@@ -234,7 +234,7 @@ section {
 }
 
 .project-card-modern h3 {
-	color: #7d6656;
+	color: #c99e7d;
 	font-family: 'Angst-Thin';
 	font-size: 22px;
 	margin-bottom: 10px;
@@ -251,7 +251,7 @@ section {
 .project-card-modern .project-button {
 	display: inline-block;
 	padding: 10px 20px;
-	background-color: #7d6656;
+	background-color: #c99e7d;
 	color: #fff;
 	text-decoration: none;
 	border-radius: 8px;
@@ -338,7 +338,7 @@ section {
 .script-card i {
 	font-size: 36px;
 	margin-bottom: 10px;
-	color: #7d6656;
+	color: #c99e7d;
 }
 
 .script-card:hover {
@@ -363,7 +363,7 @@ section {
 }
 
 .footer .socials a {
-	color: #7d6656;
+	color: #c99e7d;
 	margin: 0 10px;
 	text-decoration: none;
 	transition: 0.3s;
