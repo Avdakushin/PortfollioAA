@@ -17,8 +17,8 @@ body {
   background-color: #000;
   margin: 0;
   font-family: 'Angst-Thin';
-  overflow-x: hidden;  /* запрещает горизонтальную прокрутку */
-  overflow-y: auto;    /* разрешает вертикальную прокрутку */
+  overflow-x: hidden;  
+  overflow-y: auto;    
   width: 100%;
 }
 
