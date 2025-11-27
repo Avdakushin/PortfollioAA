@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Projects</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="Projects.css" />
+		<!-- Иконки -->
+		<link 
+  rel="stylesheet" 
+  href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" 
+  crossorigin="anonymous"
+/>
+	</head>
+	<body>
+		<!-- Кнопка Меню -->
+		<div class="MenuButton" onclick="toggleMenu()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+
+		<!-- Боковое Меню -->
+		<nav class="side-menu" id="sideMenu">
+			<ul>
+				<li><a href="#">All Projects</a></li>
+				<li><a href="#">Certificates</a></li>
+				<li><a href="#">Programming languages</a></li>
+			</ul>
+		</nav>
+		
+		<!-- Зетемнение Фона -->
+		<div id="Blackout" onclick="toggleMenu()"></div>
+
+		
+
+		<!-- Главное -->
+		<main>
+			<section class="about">
+
+			<!-- Карточки Проектов -->
+			<section class="projects">
+				<h2>Projects</h2>
+				<div class="project-grid">
+					<div class="project-card-modern">
+						<div class="project-image">
+							<img src="Images/DARK.webp" alt="Project 1 preview" />
+						</div>
+						<div class="project-content">
+							<h3>One of my best projects</h3>
+							<p>Something will appear here soon. Expect.</p>
+							<a href="#" class="project-button">View Project</a>
+						</div>
+					</div>
+					<div class="project-card-modern">
+						<div class="project-image">
+							<img src="Images/DARK.webp" alt="Project 1 preview" />
+						</div>
+						<div class="project-content">
+							<h3>One of my best projects</h3>
+							<p>Something will appear here soon. Expect.</p>
+							<a href="#" class="project-button">View Project</a>
+						</div>
+					</div>
+					<div class="project-card-modern">
+						<div class="project-image">
+							<img src="Images/DARK.webp" alt="Project 1 preview" />
+						</div>
+						<div class="project-content">
+							<h3>One of my best projects</h3>
+							<p>Something will appear here soon. Expect.</p>
+							<a href="#" class="project-button">View Project</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+
+
+		<script>
+			function toggleMenu() {
+	const menu = document.getElementById('sideMenu')
+	const overlay = document.getElementById('Blackout')
+	const body = document.body
+	const burger = document.querySelector('.MenuButton')
+
+	const isOpen = menu.classList.contains('open')
+
+	menu.classList.toggle('open')
+	overlay.classList.toggle('active')
+	burger.classList.toggle('open') // <<< добавили анимацию кнопке
+
+	if (!isOpen) {
+		const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+		body.style.overflow = 'hidden'
+		body.style.paddingRight = scrollbarWidth + 'px'
+	} else {
+		body.style.overflow = ''
+		body.style.paddingRight = ''
+	}
+}
+
+			
+		</script>
+	</body>
+</html>

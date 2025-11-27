@@ -10,7 +10,6 @@
 
 html {
   scroll-behavior: smooth;
-	height: 100%;
 }
 
 /* Тело */
@@ -21,9 +20,6 @@ body {
 	color: white;
 	line-height: 1.6;
 	overflow-x: hidden;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh; /* важно для футера */
 }
 
 .MenuButton {
@@ -39,12 +35,11 @@ body {
 	justify-content: space-between;
 
 	opacity: 0;
-	transform: translateX(-40px); /* уезжает влево */
+	transform: translateX(-40px); 
 	animation: slideInFromLeft 0.7s ease-out forwards;
-	animation-delay: 2s; /* появляется после Portfolio */
+	animation-delay: 2s; 
 }
 
-/* Полоски (оставляем как было) */
 .MenuButton span {
 	display: block;
 	height: 1px;
@@ -78,7 +73,6 @@ body {
 		transform: translateX(0);
 	}
 }
-
 
 /* Открытое Боковое Меню */
 .side-menu {
@@ -140,41 +134,108 @@ body {
 	visibility: visible;
 }
 
-/* Шапка */
-header {
-	display: flex;
-  justify-content: center; /* по горизонтали */
-  align-items: center;     /* по вертикали */
-  height: 100vh;           /* занимает весь экран */
-  text-align: center;
-  padding: 0; /* убираем padding */
+main {
+	max-width: 1000px;
+	margin: 90px auto;
+	padding: 0 20px;
 }
 
-/* Заставка */
-h1.BrandAA {
-	color: #c99e7d; 
-	font-family: 'YellovaSignature', serif;
-	font-size: 52px;
-	font-weight: 400;
-	letter-spacing: 3px;
-	margin: 0;
+section {
+	margin-bottom: 100px;
+	text-align: center;
 	opacity: 0;
-	animation: colorFadeIn 3s ease-out forwards;
+	transform: translateY(30px);
+	animation: slideUpFade 1s ease-out forwards;
 }
 
-@keyframes colorFadeIn {
+.projects h2{
+	font-family: 'YellovaSignature';
+	font-size: 50px;
+	color: #c99e7d;
+	letter-spacing: 4px;
+	margin-bottom: 40px;
+	font-weight: 400;
+}
+
+/* Проекты */
+.projects {
+	animation-delay: 0.5s;
+}
+
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 30px;
+	padding: 20px 0;
+	margin-top: 30px;
+}
+
+.project-card-modern {
+	background: linear-gradient(145deg, #1a1a1a, #0e0e0e);
+	border: 1px solid #2c2c2c;
+	border-radius: 18px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.4s ease, box-shadow 0.4s ease;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.project-card-modern:hover {
+	transform: translateY(-10px);
+}
+
+.project-card-modern .project-image img {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	display: block;
+}
+
+.project-card-modern .project-content {
+	padding: 20px;
+	text-align: left;
+}
+
+.project-card-modern h3 {
+	color: #c99e7d;
+	font-family: 'Angst-Thin';
+	font-size: 22px;
+	margin-bottom: 10px;
+	font-weight: 400;
+}
+
+.project-card-modern p {
+	color: #bbb;
+	font-size: 15px;
+	margin-bottom: 15px;
+	font-family: 'Angst-Thin';
+}
+
+.project-card-modern .project-button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #6d5543;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 8px;
+	font-family: 'Angst-Thin';
+	font-size: 14px;
+	transition: background-color 0.3s;
+}
+
+.project-card-modern .project-button:hover {
+	background-color: #a38670;
+}
+
+@keyframes fadeScaleIn {
 	0% {
 		opacity: 0;
-		color: #000000; 
-	}
-
-	50% {
-		opacity: 0.7;
-		color: #9c826e;
+		transform: scale(0.8);
 	}
 	100% {
 		opacity: 1;
-		color: #c99e7d;
+		transform: scale(1);
 	}
 }
 
@@ -187,33 +248,25 @@ h1.BrandAA {
 	}
 }
 
-/* Футер */
-.footer {
-	padding: 30px 0px;
-	background: #000;
-	text-align: center;
-	font-family: 'Angst-Thin';
-	/* border-top: 1px solid #222; */
-	color: #ffffff;
-	opacity: 0;
-	animation: fadeIn 1.2s ease-out forwards;
-	animation-delay: 3s;
-	margin-top: auto; 
+@keyframes fadeInText {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
-.footer{
-	margin-top: 0px;
+@keyframes slideUpFade {
+	0% {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
-
-.footer .socials a {
-	color: #c99e7d;
-	margin: 0 10px;
-	text-decoration: none;
-	transition: 0.3s;
-}
-
-.footer .socials a:hover {
-	color: #fff;
-}
-
 

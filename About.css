@@ -140,27 +140,6 @@ body {
 	visibility: visible;
 }
 
-/* Шапка */
-header {
-	display: flex;
-  justify-content: center; /* по горизонтали */
-  align-items: center;     /* по вертикали */
-  height: 100vh;           /* занимает весь экран */
-  text-align: center;
-  padding: 0; /* убираем padding */
-}
-
-/* Заставка */
-h1.BrandAA {
-	color: #c99e7d; 
-	font-family: 'YellovaSignature', serif;
-	font-size: 52px;
-	font-weight: 400;
-	letter-spacing: 3px;
-	margin: 0;
-	opacity: 0;
-	animation: colorFadeIn 3s ease-out forwards;
-}
 
 @keyframes colorFadeIn {
 	0% {
@@ -178,6 +157,78 @@ h1.BrandAA {
 	}
 }
 
+
+h2.AboutAA {
+	color: #fff;
+	font-family: 'Angst-Thin';
+	font-size: 25px;
+	font-weight: 400;
+	letter-spacing: 3px;
+	margin-top: 10px;
+	animation: fadeIn 1.2s ease-out forwards;
+	opacity: 0;
+	animation-delay: 1.5s;
+}
+
+main {
+	max-width: 1000px;
+	margin: 90px auto 0 auto; /* верхний margin */
+	padding: 0 20px;
+	flex: 1; /* растягивает main на оставшееся место */
+}
+
+section {
+	margin-bottom: 100px;
+	text-align: center;
+	opacity: 0;
+	transform: translateY(30px);
+	animation: slideUpFade 1s ease-out forwards;
+}
+
+.about {
+	animation-delay: 2.5s;
+}
+
+.about h2{
+	font-family: 'YellovaSignature';
+	font-size: 50px;
+	color: #c99e7d;
+	letter-spacing: 4px;
+	margin-bottom: 40px;
+	font-weight: 400;
+}
+
+.about p {
+	font-size: 18px;
+	color: #ccc;
+	margin-bottom: 15px;
+	font-weight: 400;
+	font-family: 'Angst-Thin';
+	animation: fadeInText 0.8s ease-out forwards;
+	opacity: 0;
+}
+
+.about p:nth-of-type(1) {
+	animation-delay: 3.2s;
+}
+.about p:nth-of-type(2) {
+	animation-delay: 3.4s;
+}
+.about p:nth-of-type(3) {
+	animation-delay: 3.6s;
+}
+
+@keyframes fadeScaleIn {
+	0% {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -187,33 +238,24 @@ h1.BrandAA {
 	}
 }
 
-/* Футер */
-.footer {
-	padding: 30px 0px;
-	background: #000;
-	text-align: center;
-	font-family: 'Angst-Thin';
-	/* border-top: 1px solid #222; */
-	color: #ffffff;
-	opacity: 0;
-	animation: fadeIn 1.2s ease-out forwards;
-	animation-delay: 3s;
-	margin-top: auto; 
+@keyframes fadeInText {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
-.footer{
-	margin-top: 0px;
+@keyframes slideUpFade {
+	0% {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
-
-.footer .socials a {
-	color: #c99e7d;
-	margin: 0 10px;
-	text-decoration: none;
-	transition: 0.3s;
-}
-
-.footer .socials a:hover {
-	color: #fff;
-}
-
-
