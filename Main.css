@@ -164,7 +164,7 @@ h1.BrandAA {
 
 
   /* Градиент оранжевый-белый-оранжевый */
-  background: linear-gradient(90deg, #131313,#171717, #c99e7d);
+  background: linear-gradient(90deg, #000000, #c99e7d);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
