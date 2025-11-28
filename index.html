@@ -4,7 +4,10 @@
 		<title>AVDAKUSHIN</title>
 
 		<!-- Favicon -->
-		<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><style>.stroke{fill:none;stroke:%23ffffff;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;}</style><!-- Белая буква A --><path class='stroke' d='M 15,20 L 50,80 L 85,20'/><!-- Белая перевернутая буква A --><path class='stroke' d='M 15,80 L 50,20 L 85,80'/><!-- Общая перекладина --><line class='stroke' x1='30' y1='50' x2='70' y2='50'/></svg>">
+		<link
+			rel="icon"
+			href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><style>.stroke{fill:none;stroke:%23ffffff;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;}</style><!-- Белая буква A --><path class='stroke' d='M 15,20 L 50,80 L 85,20'/><!-- Белая перевернутая буква A --><path class='stroke' d='M 15,80 L 50,20 L 85,80'/><!-- Общая перекладина --><line class='stroke' x1='30' y1='50' x2='70' y2='50'/></svg>"
+		/>
 
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,13 +30,24 @@
 
 		<!-- Боковое Меню -->
 		<nav class="side-menu" id="sideMenu">
-			<ul>
-				<li><a href="#">About Me</a></li>
-				<li><a href="#">Projects</a></li>
-				<li><a href="#">Certificates</a></li>
-				<li><a href="#">Programming languages</a></li>
-			</ul>
-		</nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Me</a></li>
+        
+        <!-- Portfolio с подпунктами -->
+        <li class="portfolio-item">
+            <a href="#" class="portfolio-toggle">Portfolio <i class="fas fa-chevron-down"></i></a>
+        </li>
+        <li class="portfolio-submenu">
+            <a href="#">Projects</a>
+            <a href="#">Skills</a>
+            <a href="#">Certificates</a>
+            <a href="#">Experience</a>
+        </li>
+        
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 
 		<!-- Затемнение Фона -->
 		<div id="Blackout" onclick="toggleMenu()"></div>
@@ -75,6 +89,19 @@
 					body.style.paddingRight = ''
 				}
 			}
+			// Обработка портфолио меню
+document.querySelector('.portfolio-toggle').addEventListener('click', function(e) {
+    e.preventDefault();
+    const portfolioItem = this.parentElement;
+    portfolioItem.classList.toggle('active');
+});
+
+// Закрытие при клике вне меню
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.side-menu')) {
+        document.querySelector('.portfolio-item').classList.remove('active');
+    }
+});
 		</script>
 	</body>
 </html>
