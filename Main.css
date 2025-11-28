@@ -141,14 +141,30 @@ h1.BrandAA {
 }
 
 /* Задержка для пунктов меню */
-.side-menu li:nth-child(1) { transition-delay: 0.1s; }
-.side-menu li:nth-child(2) { transition-delay: 0.2s; }
-.side-menu li:nth-child(3) { transition-delay: 0.3s; }
-.side-menu li:nth-child(4) { transition-delay: 0.4s; }
-.side-menu li:nth-child(5) { transition-delay: 0.5s; }
-.side-menu li:nth-child(6) { transition-delay: 0.6s; }
-.side-menu li:nth-child(7) { transition-delay: 0.7s; }
-.side-menu li:nth-child(8) { transition-delay: 0.8s; }
+.side-menu li:nth-child(1) {
+	transition-delay: 0.1s;
+}
+.side-menu li:nth-child(2) {
+	transition-delay: 0.2s;
+}
+.side-menu li:nth-child(3) {
+	transition-delay: 0.3s;
+}
+.side-menu li:nth-child(4) {
+	transition-delay: 0.4s;
+}
+.side-menu li:nth-child(5) {
+	transition-delay: 0.5s;
+}
+.side-menu li:nth-child(6) {
+	transition-delay: 0.6s;
+}
+.side-menu li:nth-child(7) {
+	transition-delay: 0.7s;
+}
+.side-menu li:nth-child(8) {
+	transition-delay: 0.8s;
+}
 
 .side-menu a {
 	color: #ffffff;
@@ -183,7 +199,7 @@ h1.BrandAA {
 }
 
 .portfolio-submenu a:hover {
-	color:  #535353;
+	color: #535353;
 }
 
 .portfolio-toggle {
@@ -296,23 +312,23 @@ h1.BrandAA {
 		font-size: 65px;
 		white-space: normal;
 	}
-	
+
 	.mobile-break {
 		display: block;
 	}
-	
+
 	.side-menu {
 		width: 230px;
 	}
-	
+
 	.side-menu a {
 		font-size: 30px;
 	}
-	
+
 	.portfolio-submenu a {
-		font-size: 30px; 
+		font-size: 30px;
 	}
-	
+
 	.MenuButton {
 		top: 15px;
 		left: 15px;
