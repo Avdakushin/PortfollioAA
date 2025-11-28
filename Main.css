@@ -50,7 +50,7 @@ h1.BrandAA {
 	margin: 0;
 	text-align: center;
 	line-height: 1.2;
-	background: linear-gradient(90deg, #000000, #ffffff);
+	background: linear-gradient(90deg, #000000, #7d6656);
 	background-size: 200% auto;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -60,6 +60,53 @@ h1.BrandAA {
 /* Перенос только на мобильных */
 .mobile-break {
 	display: none;
+}
+
+
+.symbol-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-delay: 2.5s;
+}
+
+/* Основной символ */
+.main-symbol {
+    width: 120px;
+    height: 120px;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2)); /* Более тонкая тень */
+    transition: all 0.3s ease;
+}
+
+.main-symbol:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.3)); /* Более тонкая тень при наведении */
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 767px) {
+    .symbol-container {
+        padding: 30px 20px;
+    }
+    
+    .main-symbol {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .symbol-container {
+        padding: 20px 15px;
+    }
+    
+    .main-symbol {
+        width: 80px;
+        height: 80px;
+    }
 }
 
 /* Кнопка Меню */
@@ -176,7 +223,7 @@ h1.BrandAA {
 }
 
 .side-menu a:hover {
-	color: #535353;
+	color: #7d6656;
 }
 
 /* Подменю портфолио */
@@ -199,7 +246,7 @@ h1.BrandAA {
 }
 
 .portfolio-submenu a:hover {
-	color: #535353;
+	color: #7d6656;
 }
 
 .portfolio-toggle {
@@ -364,3 +411,4 @@ h1.BrandAA {
 		font-size: 50px;
 	}
 }
+
