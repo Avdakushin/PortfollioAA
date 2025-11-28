@@ -30,24 +30,26 @@
 
 		<!-- Боковое Меню -->
 		<nav class="side-menu" id="sideMenu">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Me</a></li>
-        
-        <!-- Portfolio с подпунктами -->
-        <li class="portfolio-item">
-            <a href="#" class="portfolio-toggle">Portfolio <i class="fas fa-chevron-down"></i></a>
-        </li>
-        <li class="portfolio-submenu">
-            <a href="#">Projects</a>
-            <a href="#">Skills</a>
-            <a href="#">Certificates</a>
-            <a href="#">Experience</a>
-        </li>
-        
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About Me</a></li>
+
+				<!-- Portfolio с подпунктами -->
+				<li class="portfolio-item">
+					<a href="#" class="portfolio-toggle"
+						>Portfolio <i class="fas fa-chevron-down"></i
+					></a>
+				</li>
+				<li class="portfolio-submenu">
+					<a href="#">Projects</a>
+					<a href="#">Skills</a>
+					<a href="#">Certificates</a>
+					<a href="#">Experience</a>
+				</li>
+
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
 
 		<!-- Затемнение Фона -->
 		<div id="Blackout" onclick="toggleMenu()"></div>
@@ -90,18 +92,20 @@
 				}
 			}
 			// Обработка портфолио меню
-document.querySelector('.portfolio-toggle').addEventListener('click', function(e) {
-    e.preventDefault();
-    const portfolioItem = this.parentElement;
-    portfolioItem.classList.toggle('active');
-});
+			document
+				.querySelector('.portfolio-toggle')
+				.addEventListener('click', function (e) {
+					e.preventDefault()
+					const portfolioItem = this.parentElement
+					portfolioItem.classList.toggle('active')
+				})
 
-// Закрытие при клике вне меню
-document.addEventListener('click', function(e) {
-    if (!e.target.closest('.side-menu')) {
-        document.querySelector('.portfolio-item').classList.remove('active');
-    }
-});
+			// Закрытие при клике вне меню
+			document.addEventListener('click', function (e) {
+				if (!e.target.closest('.side-menu')) {
+					document.querySelector('.portfolio-item').classList.remove('active')
+				}
+			})
 		</script>
 	</body>
 </html>
