@@ -193,7 +193,7 @@ h1.BrandAA {
 /* Мобильные устройства */
 @media (max-width: 767px) {
 	h1.BrandAA {
-		font-size: 60px; /* УВЕЛИЧЕНО */
+		font-size: 52px;
 		white-space: normal;
 	}
 	
@@ -205,7 +205,7 @@ h1.BrandAA {
 /* Очень маленькие экраны */
 @media (max-width: 480px) {
 	h1.BrandAA {
-		font-size: 60px; /* УВЕЛИЧЕНО */
+		font-size: 44px;
 		letter-spacing: 2px;
 	}
 }
@@ -213,7 +213,7 @@ h1.BrandAA {
 /* Еще более маленькие экраны */
 @media (max-width: 380px) {
 	h1.BrandAA {
-		font-size: 45px; /* УВЕЛИЧЕНО */
+		font-size: 38px;
 	}
 }
 
@@ -233,18 +233,8 @@ h1.BrandAA {
 	}
 }
 
-/* Адаптация футера для мобильных */
-@media (max-width: 767px) {
-	.footer .socials {
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
-	}
-	
-	.footer .socials a {
-		margin: 5px 0;
-	}
-}
+/* УБИРАЕМ адаптацию футера для мобильных - оставляем как есть */
+/* .footer .socials остается без изменений */
 
 /* Появление текста */
 @keyframes colorFadeIn {
