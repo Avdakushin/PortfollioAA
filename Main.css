@@ -176,14 +176,14 @@ h1.BrandAA {
 	display: block;
 	padding: 8px 0px 8px 20px;
 	font-size: 30px; /* Такой же размер как у обычных пунктов */
-	color: #888;
+	color: #ffffff;
 	border: none;
 	opacity: 1 !important;
 	transform: none !important;
 }
 
 .portfolio-submenu a:hover {
-	color: #fff;
+	color:  #535353;
 }
 
 .portfolio-toggle {
@@ -302,15 +302,15 @@ h1.BrandAA {
 	}
 	
 	.side-menu {
-		width: 200px;
+		width: 230px;
 	}
 	
 	.side-menu a {
-		font-size: 20px;
+		font-size: 30px;
 	}
 	
 	.portfolio-submenu a {
-		font-size: 20px; /* Такой же размер на мобильных */
+		font-size: 30px; 
 	}
 	
 	.MenuButton {
