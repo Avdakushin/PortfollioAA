@@ -6,11 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="Main.css" />
 		<!-- Иконки -->
-		<link 
-  rel="stylesheet" 
-  href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" 
-  crossorigin="anonymous"
-/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
+			crossorigin="anonymous"
+		/>
 	</head>
 	<body>
 		<!-- Кнопка Меню -->
@@ -30,12 +30,12 @@
 			</ul>
 		</nav>
 
-		<!-- Зетемнение Фона -->
+		<!-- Затемнение Фона -->
 		<div id="Blackout" onclick="toggleMenu()"></div>
 
 		<!-- Шапка -->
 		<header class="header">
-			<h1 class="BrandAA">Andrey Avdakushin</h1>
+			<h1 class="BrandAA">Andrey<br class="mobile-break" />Avdakushin</h1>
 		</header>
 
 		<footer class="footer">
@@ -49,28 +49,27 @@
 
 		<script>
 			function toggleMenu() {
-	const menu = document.getElementById('sideMenu')
-	const overlay = document.getElementById('Blackout')
-	const body = document.body
-	const burger = document.querySelector('.MenuButton')
+				const menu = document.getElementById('sideMenu')
+				const overlay = document.getElementById('Blackout')
+				const body = document.body
+				const burger = document.querySelector('.MenuButton')
 
-	const isOpen = menu.classList.contains('open')
+				const isOpen = menu.classList.contains('open')
 
-	menu.classList.toggle('open')
-	overlay.classList.toggle('active')
-	burger.classList.toggle('open') 
+				menu.classList.toggle('open')
+				overlay.classList.toggle('active')
+				burger.classList.toggle('open')
 
-	if (!isOpen) {
-		const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
-		body.style.overflow = 'hidden'
-		body.style.paddingRight = scrollbarWidth + 'px'
-	} else {
-		body.style.overflow = ''
-		body.style.paddingRight = ''
-	}
-}
-
-			
+				if (!isOpen) {
+					const scrollbarWidth =
+						window.innerWidth - document.documentElement.clientWidth
+					body.style.overflow = 'hidden'
+					body.style.paddingRight = scrollbarWidth + 'px'
+				} else {
+					body.style.overflow = ''
+					body.style.paddingRight = ''
+				}
+			}
 		</script>
 	</body>
 </html>
