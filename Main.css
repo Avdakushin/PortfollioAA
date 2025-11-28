@@ -9,7 +9,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 	height: 100%;
 }
 
@@ -142,31 +142,31 @@ body {
 /* Шапка */
 header {
 	display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  padding: 0 20px;
-  box-sizing: border-box;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+	padding: 0 20px;
+	box-sizing: border-box;
 }
 
 /* Заставка - ОСНОВНЫЕ СТИЛИ */
 h1.BrandAA {
-  font-family: 'YellovaSignature', serif;
-  font-weight: 400;
-  letter-spacing: 3px;
-  margin: 0;
-  text-align: center;
-  line-height: 1.2;
+	font-family: 'YellovaSignature', serif;
+	font-weight: 400;
+	letter-spacing: 3px;
+	margin: 0;
+	text-align: center;
+	line-height: 1.2;
 
-  /* Градиент оранжевый-белый-оранжевый */
-  background: linear-gradient(90deg, #000000, #c99e7d);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	/* Градиент оранжевый-белый-оранжевый */
+	background: linear-gradient(90deg, #000000, #c99e7d);
+	background-size: 200% auto;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 
-  /* Анимация отблеска + плавное появление */
-  animation: colorFadeIn 3s ease-out forwards, shine 8s linear infinite;
+	/* Анимация отблеска + плавное появление */
+	animation: colorFadeIn 3s ease-out forwards, shine 8s linear infinite;
 }
 
 /* Перенос только на мобильных */
@@ -196,7 +196,7 @@ h1.BrandAA {
 		font-size: 65px;
 		white-space: normal;
 	}
-	
+
 	.mobile-break {
 		display: block;
 	}
@@ -222,11 +222,11 @@ h1.BrandAA {
 	.side-menu {
 		width: 200px;
 	}
-	
+
 	.side-menu a {
 		font-size: 20px;
 	}
-	
+
 	.MenuButton {
 		top: 15px;
 		left: 15px;
@@ -238,14 +238,22 @@ h1.BrandAA {
 
 /* Появление текста */
 @keyframes colorFadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 /* Эффект скользящего света слева направо */
 @keyframes shine {
-  0% { background-position: 200% center; }
-  100% { background-position: -200% center; }
+	0% {
+		background-position: 200% center;
+	}
+	100% {
+		background-position: -200% center;
+	}
 }
 
 @keyframes fadeIn {
@@ -270,7 +278,7 @@ h1.BrandAA {
 	margin-top: auto;
 }
 
-.footer{
+.footer {
 	margin-top: 0px;
 }
 
