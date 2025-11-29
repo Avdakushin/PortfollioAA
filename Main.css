@@ -13,12 +13,12 @@
 	src: url('fonts/RecolorsPersonalUse.otf') format('opentype');
 }
 
+/* Базовые стили */
 html {
 	scroll-behavior: smooth;
 	height: 100%;
 }
 
-/* Тело */
 body {
 	background-color: #000;
 	margin: 0;
@@ -42,7 +42,7 @@ header {
 	box-sizing: border-box;
 }
 
-/* Заставка */
+/* Основной заголовок */
 h1.BrandAA {
 	font-family: 'YellovaSignature', serif;
 	font-weight: 400;
@@ -62,54 +62,7 @@ h1.BrandAA {
 	display: none;
 }
 
-
-.symbol-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-    opacity: 0;
-    animation: fadeIn 1.2s ease-out forwards;
-    animation-delay: 2.5s;
-}
-
-/* Основной символ */
-.main-symbol {
-    width: 120px;
-    height: 120px;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2)); /* Более тонкая тень */
-    transition: all 0.3s ease;
-}
-
-.main-symbol:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.3)); /* Более тонкая тень при наведении */
-}
-
-/* Адаптация для мобильных */
-@media (max-width: 767px) {
-    .symbol-container {
-        padding: 30px 20px;
-    }
-    
-    .main-symbol {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media (max-width: 480px) {
-    .symbol-container {
-        padding: 20px 15px;
-    }
-    
-    .main-symbol {
-        width: 80px;
-        height: 80px;
-    }
-}
-
-/* Кнопка Меню */
+/* Меню */
 .MenuButton {
 	position: fixed;
 	top: 20px;
@@ -127,7 +80,6 @@ h1.BrandAA {
 	animation-delay: 2s;
 }
 
-/* Полоски меню */
 .MenuButton span {
 	display: block;
 	height: 1px;
@@ -137,7 +89,7 @@ h1.BrandAA {
 	transition: all 0.3s ease;
 }
 
-/* Крестик при открытии */
+/* Анимация кнопки меню */
 .MenuButton.open span:nth-child(1) {
 	transform: translateY(9px) rotate(45deg);
 }
@@ -150,7 +102,7 @@ h1.BrandAA {
 	transform: translateY(-9px) rotate(-45deg);
 }
 
-/* Боковое Меню */
+/* Боковое меню */
 .side-menu {
 	position: fixed;
 	top: 0;
@@ -188,30 +140,14 @@ h1.BrandAA {
 }
 
 /* Задержка для пунктов меню */
-.side-menu li:nth-child(1) {
-	transition-delay: 0.1s;
-}
-.side-menu li:nth-child(2) {
-	transition-delay: 0.2s;
-}
-.side-menu li:nth-child(3) {
-	transition-delay: 0.3s;
-}
-.side-menu li:nth-child(4) {
-	transition-delay: 0.4s;
-}
-.side-menu li:nth-child(5) {
-	transition-delay: 0.5s;
-}
-.side-menu li:nth-child(6) {
-	transition-delay: 0.6s;
-}
-.side-menu li:nth-child(7) {
-	transition-delay: 0.7s;
-}
-.side-menu li:nth-child(8) {
-	transition-delay: 0.8s;
-}
+.side-menu li:nth-child(1) { transition-delay: 0.1s; }
+.side-menu li:nth-child(2) { transition-delay: 0.2s; }
+.side-menu li:nth-child(3) { transition-delay: 0.3s; }
+.side-menu li:nth-child(4) { transition-delay: 0.4s; }
+.side-menu li:nth-child(5) { transition-delay: 0.5s; }
+.side-menu li:nth-child(6) { transition-delay: 0.6s; }
+.side-menu li:nth-child(7) { transition-delay: 0.7s; }
+.side-menu li:nth-child(8) { transition-delay: 0.8s; }
 
 .side-menu a {
 	color: #ffffff;
@@ -238,7 +174,7 @@ h1.BrandAA {
 .portfolio-submenu a {
 	display: block;
 	padding: 8px 0px 8px 20px;
-	font-size: 30px; /* Такой же размер как у обычных пунктов */
+	font-size: 30px;
 	color: #ffffff;
 	border: none;
 	opacity: 1 !important;
@@ -260,7 +196,6 @@ h1.BrandAA {
 	transition: transform 0.3s ease;
 }
 
-/* Активное состояние */
 .portfolio-item.active + .portfolio-submenu {
 	max-height: 500px;
 }
@@ -269,7 +204,7 @@ h1.BrandAA {
 	transform: rotate(180deg);
 }
 
-/* Затемнение Фона */
+/* Затемнение фона */
 #Blackout {
 	position: fixed;
 	top: 0;
@@ -288,31 +223,120 @@ h1.BrandAA {
 	visibility: visible;
 }
 
-/* Футер */
+/* Стили для символа (закомментированы для будущего использования) */
+/*
+.symbol-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-delay: 2.5s;
+}
+
+.main-symbol {
+    width: 120px;
+    height: 120px;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+    transition: all 0.3s ease;
+}
+
+.main-symbol:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.3));
+}
+*/
+
+/* Стили для футера (закомментированы для будущего использования) */
+/*
 .footer {
-	padding: 30px 0px;
-	background: #000;
-	text-align: center;
-	font-family: 'Angst-Thin';
-	color: #272727;
-	opacity: 0;
-	animation: fadeIn 1.2s ease-out forwards;
-	animation-delay: 3s;
-	margin-top: auto;
+    padding: 60px 20px 40px;
+    background: #000;
+    text-align: center;
+    font-family: 'Angst-Thin', sans-serif;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-delay: 2.5s;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
-.footer .socials a {
-	color: #ffffff;
-	margin: 0 10px;
-	text-decoration: none;
-	transition: 0.3s;
-	font-family: 'Recolors';
-	font-size: 20px;
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-.footer .socials a:hover {
-	color: #fff;
+.footer-symbol-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    transition: all 0.3s ease;
 }
+
+.footer-symbol-container:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.footer-symbol {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.15));
+}
+
+.symbol-stroke {
+    fill: none;
+    stroke: #dbad8c;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.footer-tagline {
+    font-family: 'Angst-Thin', sans-serif;
+    color: #dbad8c;
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+    margin: 10px 0;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 22px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.social-icons a:hover {
+    color: #dbad8c;
+    transform: translateY(-3px);
+    opacity: 1;
+}
+
+.copyright {
+    font-family: 'Angst-Thin', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+}
+*/
 
 /* Анимации */
 @keyframes slideInFromLeft {
@@ -411,4 +435,3 @@ h1.BrandAA {
 		font-size: 50px;
 	}
 }
-

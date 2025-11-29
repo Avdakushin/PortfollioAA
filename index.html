@@ -6,7 +6,7 @@
 		<!-- Favicon -->
 		<link
 			rel="icon"
-			href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><style>.stroke{fill:none;stroke:%23ffffff;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;}</style><!-- Белая буква A --><path class='stroke' d='M 15,20 L 50,80 L 85,20'/><!-- Белая перевернутая буква A --><path class='stroke' d='M 15,80 L 50,20 L 85,80'/><!-- Общая перекладина --><line class='stroke' x1='30' y1='50' x2='70' y2='50'/></svg>"
+			href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><style>.stroke{fill:none;stroke:%23ffffff;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;}</style><!-- Белая буква A --><path class='stroke' d='M 15,20 L 50,80 L 85,20'/><!-- Белая перевернутая буква A --><path class='stroke' d='M 15,80 L 50,20 L 85,80'/><!-- Общая перекладина --><line class='stroke' x1='35' y1='50' x2='65' y2='50'/></svg>"
 		/>
 
 		<meta charset="UTF-8" />
@@ -44,11 +44,9 @@
 				<li class="portfolio-submenu">
 					<a href="#">Skills</a>
 					<a href="#">Projects</a>
-
 					<a href="#">Experience</a>
 					<a href="#">Certificates</a>
 				</li>
-				
 			</ul>
 		</nav>
 
@@ -60,35 +58,49 @@
 			<h1 class="BrandAA">Andrey<br class="mobile-break" />Avdakushin</h1>
 		</header>
 
-		<!-- Символ под шапкой -->
+		<!-- Символ под шапкой (закомментирован для будущего использования) -->
 		<!-- <div class="symbol-container">
 			<svg class="main-symbol" viewBox="0 0 100 100">
 				<style>
 					.symbol-stroke {
 						fill: none;
 						stroke: #ffffff;
-						stroke-width: 3; /* Уменьшил толщину с 6 до 3 */
+						stroke-width: 3;
 						stroke-linecap: round;
 						stroke-linejoin: round;
 					}
-				</style> -->
-				<!-- Белая буква A -->
-				<!-- <path class="symbol-stroke" d="M 15,20 L 50,80 L 85,20" /> -->
-				<!-- Белая перевернутая буква A -->
-				<!-- <path class="symbol-stroke" d="M 15,80 L 50,20 L 85,80" /> -->
-				<!-- Общая перекладина -->
-				<!-- <line class="symbol-stroke" x1="30" y1="50" x2="70" y2="50" />
+				</style>
+				<path class="symbol-stroke" d="M 15,20 L 50,80 L 85,20" />
+				<path class="symbol-stroke" d="M 15,80 L 50,20 L 85,80" />
+				<line class="symbol-stroke" x1="35" y1="50" x2="65" y2="50" />
 			</svg>
 		</div> -->
 
-		<footer class="footer">
-			<!-- <p>© 2025 Andrey Avdakushin</p> -->
-			<!-- <div class="socials">
-				<a href="https://github.com/Avdakushin#">GitHub</a>
-				<a href="https://t.me/avdakushin#">Telegram</a>
-				<a href="#">Email</a>
-			</div> -->
-		</footer>
+		<!-- Футер (закомментирован для будущего использования) -->
+		<!-- <footer class="footer">
+			<div class="footer-symbol-container">
+				<svg class="footer-symbol" viewBox="0 0 100 100">
+					<path class="symbol-stroke" d="M 15,20 L 50,80 L 85,20" />
+					<path class="symbol-stroke" d="M 15,80 L 50,20 L 85,80" />
+					<line class="symbol-stroke" x1="35" y1="50" x2="65" y2="50" />
+				</svg>
+			</div>
+
+			<div class="footer-content">
+				<div class="social-icons">
+					<a href="https://t.me/avdakushin" aria-label="Telegram">
+						<i class="fab fa-telegram"></i>
+					</a>
+					<a href="https://github.com/Avdakushin" aria-label="GitHub">
+						<i class="fab fa-github"></i>
+					</a>
+					<a href="mailto:your-email@example.com" aria-label="Email">
+						<i class="far fa-envelope"></i>
+					</a>
+				</div>
+				<p class="copyright">© 2025</p>
+			</div>
+		</footer> -->
 
 		<script>
 			function toggleMenu() {
@@ -113,6 +125,7 @@
 					body.style.paddingRight = ''
 				}
 			}
+
 			// Обработка портфолио меню
 			document
 				.querySelector('.portfolio-toggle')
