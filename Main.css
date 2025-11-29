@@ -50,7 +50,7 @@ h1.BrandAA {
 	margin: 0;
 	text-align: center;
 	line-height: 1.2;
-	background: linear-gradient(90deg, #000000, #dbad8c);
+	background: linear-gradient(90deg, #000000, #000000, #dbad8c);
 	background-size: 200% auto;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
